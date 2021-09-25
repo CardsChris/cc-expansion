@@ -6,3 +6,4 @@ CC expansion mod made by J4yd3n333#0613 on discord!
 - 11 new symbols
 - 2 symbol patches
 - Quite a few new symbol interactions
+- Requires EBP (EffectBuilderPlugin), link can be found here: https://github.com/Fr0sty67/EffectBuilderPlugin

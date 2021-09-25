@@ -1,0 +1,9 @@
+{
+    "id": "cc-expansion",
+    "version": "1.0.0",
+    "authors": ["J4yd3n333#0613"],
+    "name": "CC expansion",
+    "description": "Expands upon many existing symbols in the game, as well as adding multiple new ones!",
+    "dependencies": ["effects-builder-plugin"],
+    "load-after": []
+}

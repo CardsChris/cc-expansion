@@ -1,6 +1,8 @@
 # cc-expansion
 CC expansion mod made by J4yd3n333#0613 on discord!
 # CHANGELOG
+## V1.0.1
+- Fixed a bug with bowling pin crashing the game, will work on a solution that keeps original functionality intact
 ## V1.0.0
 - Initial release
 - 11 new symbols

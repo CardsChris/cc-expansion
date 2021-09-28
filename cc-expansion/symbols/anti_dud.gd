@@ -11,9 +11,9 @@ func init(modloader: Reference, params):
     self.rarity = "very_rare"
     self.groups = []
     self.sfx = ["growhit"]
-    self.buffs.push_back(buff().set_value(2).add_condition({"condition": "turns", "operator": "every", "value": 10}).consumes().animate("shake"))
-    self.destroys.push_back(destroy().set_type("dud"))
-    #self.transforms.push_back(transform().set_target({"self": {}}).set_new_type("??").add_condition({"condition": "adjacent", "type": "dud"}).animate("bounce"))
+    self.buffs.push_back(buff().set_value(2).add_condition({"condition": "turns", "operator": "every", "value": 10}).animate("shake"))
+    self.destroys.push_back(destroy().set_type("dud").consumes().animate("bounce"))
+    self.adds.push_back(add().set_new_type("void_creature").set_quantity(3).add_condition({"condition": "adjacent", "type": "dud"}).animate("bounce"))
     self.texture = load_texture("res://cc-expansion/symbols/anti_dud.png")
     self.name = "Anti Dud"
     self.description = .get_description() + " Part of the <color_92F4EC>CC Expansion<end> mod."

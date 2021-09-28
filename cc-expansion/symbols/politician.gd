@@ -7,10 +7,12 @@ func init(modloader: Reference, params):
     
     self.id = "politician"
     self.value = 5
-    self.values = []
+    self.values = [10]
     self.rarity = "very_rare"
     self.groups = ["human", "organism"]
     self.buffs.push_back(buff().set_type("billionaire").set_buff_type("temporary_bonus").set_value(5))
+    self.adds.push_back(add().set_new_type("coin").random(0).animate("shake"))
+    self.sfx = ["mmm"]
     
     self.texture = load_texture("res://cc-expansion/symbols/politician.png")
     self.name = "Politician"

@@ -14,19 +14,33 @@ func load(modloader: Reference, mod_info, tree: SceneTree):
     modloader.add_mod_symbol("res://cc-expansion/symbols/anti_dud.gd")
     modloader.add_mod_symbol("res://cc-expansion/symbols/politician.gd")
     modloader.add_symbol_patch("res://cc-expansion/symbol-patches/bear.gd")
+    modloader.add_symbol_patch("res://cc-expansion/symbol-patches/rain.gd")
     modloader.add_symbol_patch("res://cc-expansion/symbol-patches/billionaire.gd")
     var gardnerlikes = ["leaves", "banana_peel", "seed", "flower"]
+    var treefruit = ["apple", "banana", "coconut", "orange", "peach", "pear"]
+    var voids = ["void_creature", "void_fruit", "void_stone"]
 
     for i in gardnerlikes:
         modloader.add_symbol_patch("res://cc-expansion/symbol-patches/Group.gd", {"id": i, "group": "gardenerlikes"})
 
+    for i in treefruit: 
+        modloader.add_symbol_patch("res://cc-expansion/symbol-patches/Group.gd", {"id": i, "group": "treefruit"})
+    for i in voids:      
+        modloader.add_symbol_patch("res://cc-expansion/symbol-patches/Group.gd", {"id": i, "group": "voids"})
+     
+
 var starting_symbols
 var symbol_list
 
-# func modify_starting_symbols(symbols):
-#     starting_symbols = symbols
-#     starting_symbols = ["anti_dud", "caramel_apple", "caramel", "honeyjar", "sugarcube", "leaves", "tea", "politician", "bear", "billionaire"]
-#     starting_symbols.append("tree")
-#     starting_symbols.append("gardener")
+func modify_starting_symbols(symbols):
+     starting_symbols = symbols
+     #starting_symbols.append("politician")
+     #starting_symbols.append("billionaire")
+     #starting_symbols = ["anti_dud", "caramel_apple", "caramel", "honeyjar", "sugarcube", "leaves", "tea", "politician", "bear", "billionaire"]
+     # starting_symbols.append("anti_dud")
+     # starting_symbols.append("rain")
+     # starting_symbols.append("tree")
+     # starting_symbols.append("farmer")
+     # starting_symbols.append("gardener")
 #     starting_symbols.append("bowling_pin")
-#     return (starting_symbols)
+     return (starting_symbols)

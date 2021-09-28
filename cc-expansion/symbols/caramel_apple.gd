@@ -10,7 +10,8 @@ func init(modloader: Reference, params):
     self.values = []
     self.rarity = "very_rare"
     self.groups = ["food", "fruitlikes", "fruit"]
+    self.buffs.push_back(buff().set_type("mrs_fruit").set_buff_type("permanent_bonus").set_value(1))
     
     self.texture = load_texture("res://cc-expansion/symbols/caramel_apple.png")
     self.name = "Caramel Apple"
-    self.description = "Part of the <color_92F4EC>CC Expansion<end> mod."
+    self.description = "<icon_mrs_fruit> get an extra permanent <icon_coin> bonus when eating this snack! Part of the <color_92F4EC>CC Expansion<end> mod."

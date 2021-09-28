@@ -9,15 +9,12 @@ func init(modloader: Reference, params):
     self.value = 4
     self.values = [5]
     self.rarity = "rare"
-    self.groups = ["plant", "farmerlikes", "spawner0"]
+    self.groups = ["plant", "farmerlikes", "spawner0", "beelikes"]
     self.sfx = ["bee"]
+    self.adds.push_back(add().set_quantity(1).set_new_type("leaves").add_condition({"condition": "adjacent", "type": "gardener"}).animate("shake"))
+    self.adds.push_back(add().set_new_type("leaves").random(0).animate("shake"))
+    self.adds.push_back(add().set_new_group("treefruit").add_condition({"condition": "adjacent", "type": "farmer"}))
     
     self.texture = load_texture("res://cc-expansion/symbols/tree.png")
     self.name = "Tree"
-    self.description = "Has a <color_E14A68>5%<end> chance of adding <icon_leaves>. When adjacent to <icon_gardener>, adds <icon_leaves>. Part of the <color_92F4EC>CC Expansion<end> mod."
-
-func add_conditional_effects(symbol, adjacent):
-    symbol.add_effect(effect().if_value_random(0).add_symbol_type("leaves").animate("shake"))
-    for i in adjacent:
-        if adjacent.id == "gardener":
-            symbol.add_effect(effect().add_symbol_type("leaves").animate("shake"))
+    self.description = .get_description() + " Part of the <color_92F4EC>CC Expansion<end> mod."
